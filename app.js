@@ -6,11 +6,11 @@ function populate() {
         // Vraag laten zien.
         const element = $('#question')[0];
         let questionAndText = `<h2 id="questionIndex">Question ${quiz.questionIndex + 1}</h1>`;
-        questionAndText += `<h3>${quiz.getQuestionIndex().text}</h3>`; //Haalt het object van de vraag op met getQuestionIndex.
+        questionAndText += `<h3>${quiz.getQuestion().text}</h3>`; //Haalt het object van de vraag op met getQuestion.
         element.innerHTML = questionAndText;
 
         // Antwoorden laten zien.
-        const choices = quiz.getQuestionIndex().choices;
+        const choices = quiz.getQuestion().choices;
         for(let i = 0; i < choices.length; i++) {
             let element = document.getElementById("choice" + i); 
             element.innerHTML = choices[i]; 
