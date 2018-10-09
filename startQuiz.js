@@ -18,7 +18,7 @@ $("#letsPlay").click(function(){
 
     //creëren van jsonString; Vragen ophalen d.m.v. API; in juiste format pushen naar Array en binden aan questions prototype
     $(function () {
-        const update = function() {
+        function update() {
             let questions = [];
             let jsonString = "https://opentdb.com/api.php?" + $('form').serialize() + "&type=multiple";
 

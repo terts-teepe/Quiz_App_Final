@@ -15,6 +15,12 @@ Quiz.prototype.guess = function(choice) {
     	const correctSound = new Audio('https://ia801504.us.archive.org/15/items/correct-sound-effect/correct-sound-effect.mp3');
 		correctSound.play();
         this.score++;
+        console.log("goed gedaan")
+    }
+    else {
+        const correctSound = new Audio('https://ia801508.us.archive.org/23/items/false-question-incorrect-answer-sound-effect/false-question-incorrect-answer-sound-effect.mp3');
+        correctSound.play();
+        console.log("slecht gedaan")
     }
     this.questionIndex++;
 }
